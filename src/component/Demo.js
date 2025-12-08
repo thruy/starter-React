@@ -9,7 +9,12 @@ class Demo extends React.Component {
 
     handleClick(event) {
         console.log("Data changed");
-        console.log(event);
+        console.log('My name is: ', this.state.name);
+
+        this.setState({
+            name: 'Thruy',
+            age: Math.floor(Math.random() * 100) + 1
+        })
     }
 
     handleOnMouseOver(event) {
@@ -23,7 +28,7 @@ class Demo extends React.Component {
                 <p>Demo component with statistic {Math.random()}</p>
                 <div>My name: {this.state.name}, {this.state.age} years old and from {this.state.Address}</div>
                 <button onMouseOver={this.handleOnMouseOver}>onMouseOver</button>
-                <button onClick={this.handleClick}>onClick</button>
+                <button onClick={(e) => { this.handleClick(e) }}>onClick</button>
             </div>
 
         )
