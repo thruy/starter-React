@@ -10,7 +10,7 @@ class App extends React.Component {
     return (
       <div>
         <div>My demo component</div>
-        <Demo></Demo>
+        <Demo />
       </div>
     )
   }
