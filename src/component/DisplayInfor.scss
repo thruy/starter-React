@@ -1,11 +1,14 @@
 .display-info-container {
     margin: 20px;
     .red {
-    color: red;
+        color: red;
     }
 
     .blue {
-    color: blue;
+        color: blue;
     }
-
+    
+    img {
+        width: 200px;
+    }
 }
