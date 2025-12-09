@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import './DisplayInfor.scss';
 import image from '../logo.svg';
 // khong nen luu file anh trong public vi se khong duoc xu ly boi webpack
@@ -51,6 +51,14 @@ const DisplayInfor = (props) => {
     function handleShowListUsers() {
         setIsShowListUsers(!isShowListUsers);
     }
+
+    console.log("call render");
+    useEffect(() => {
+        if (listUsers.length === 0) {
+            alert("You deleted all the users!");
+        }
+        console.log("call useEffect");
+    }, [listUsers]);
 
     return (
         <div className="display-info-container">
