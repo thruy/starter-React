@@ -19,24 +19,23 @@ class DisplayInfor extends React.Component {
         //console.table(listUsers);
         return (
             <div className="display-info-container">
-                <img src={image} alt="react-image" />
+                {/* <img src={image} alt="react-image" /> */}
                 <div>
                     <span onClick={(e) => this.handleHideUser(e)}>{this.state.isShowListUser ? "Hide list users" : "Show list user"}</span>
                 </div>
                 <div>Display users information: </div>
                 {this.state.isShowListUser &&
-                    <div>
+                    <>
                         {listUsers.map((user) => {
                             return (
                                 <div key={user.id} className={user.age >= 18 ? "blue" : "red"}>
                                     <p style={{ fontFamily: "sans-serif", fontWeight: 'bold' }}>My name is {user.name}, My age: {user.age} years old.</p>
+                                    <button onClick={() => this.props.handleDeleteUser(user.id)}>Delete</button>
                                     <hr />
                                 </div>
                             )
                         })}
-                        {/* <p>My name is {name}</p>
-                <p>My age: {age} years old.</p> */}
-                    </div>
+                    </>
                 }
             </div>
         )
