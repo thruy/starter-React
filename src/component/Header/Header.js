@@ -23,9 +23,9 @@ const Header = () => {
                     </Nav>
                     <Nav>
                         <NavDropdown title="Thêm" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Đăng nhập</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Đăng ký</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Thông tin</NavDropdown.Item>
+                            <NavDropdown.Item>Đăng nhập</NavDropdown.Item>
+                            <NavDropdown.Item >Đăng ký</NavDropdown.Item>
+                            <NavDropdown.Item  >Thông tin</NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
                 </Navbar.Collapse>
