@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 //import Demo from './component/Demo';
 import React from 'react';
 import Header from './component/Header/Header';
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 
 // const App = () => {
 //   return (
@@ -21,16 +21,17 @@ const App = () => {
 
   return (
     <div className='app-container'>
-      <Header />
-      <div>
-        test Link to component:
-        <div>
-          <button>
-            <Link to="/users">Go to User</Link>
-          </button>
-          <button>
-            <Link to="/admins">Go to Admin</Link>
-          </button>
+      <div className='header-container'>
+        <Header />
+      </div>
+
+      <div className='main-container'>
+        <div className='sidebar-contianer'>
+
+        </div>
+        <div className='content-container'>
+
+          <Outlet />
         </div>
       </div>
     </div>
