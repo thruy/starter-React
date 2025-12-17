@@ -9,7 +9,10 @@ import {
     SidebarContent,
 } from 'react-pro-sidebar';
 import { FaTachometerAlt, FaGem, FaList, FaGithub, FaRegLaughWink, FaHeart } from 'react-icons/fa';
+import { DiReact } from 'react-icons/di';
+import { MdDashboard } from 'react-icons/md';
 import sidebarBg from '../../assets/bg2.jpg';
+import logo from '../../assets/hust.png';
 
 const Sidebar = (props) => {
     const { image, collapsed, toggled, handleToggleSidebar } = props;
@@ -35,25 +38,26 @@ const Sidebar = (props) => {
                             whiteSpace: 'nowrap',
                         }}
                     >
-                        HUST management
+                        <icon><img src={logo} alt="hust-logo" width={20} /></icon>
+                        <span>HUST management</span>
                     </div>
                 </SidebarHeader>
 
                 <SidebarContent>
                     <Menu iconShape="circle">
-                        <MenuItem icon={<FaTachometerAlt />} suffix={<span className="badge red">new</span>}>
+                        <MenuItem icon={<MdDashboard />} suffix={<span className="badge red">new</span>}>
                             Dashboard
                         </MenuItem>
                         <MenuItem icon={<FaGem />}>Components</MenuItem>
                     </Menu>
                     <Menu iconShape="circle">
                         <SubMenu
-                            suffix={<span className="badge yellow">3</span>}
-                            icon={<FaRegLaughWink />}
+                            title="Features"
+                            icon={<FaGem />}
                         >
-                            <MenuItem>Menu Item 1</MenuItem>
-                            <MenuItem>Menu Item 2</MenuItem>
-                            <MenuItem>Menu Item 3</MenuItem>
+                            <MenuItem>Quản lý giáo viên</MenuItem>
+                            <MenuItem>Quản lý sinh viên</MenuItem>
+                            <MenuItem>Quản lý lớp học</MenuItem>
                         </SubMenu>
                     </Menu>
                 </SidebarContent>
