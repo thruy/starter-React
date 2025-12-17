@@ -22,11 +22,14 @@ const Header = () => {
 
                     </Nav>
                     <Nav>
-                        <NavDropdown title="Thêm" id="basic-nav-dropdown">
+                        <button className='btn-login'>Log in</button>
+                        <button className='btn-signup'>Sign up</button>
+                        {/* <NavDropdown title="Thêm" id="basic-nav-dropdown">
+
                             <NavDropdown.Item>Đăng nhập</NavDropdown.Item>
                             <NavDropdown.Item >Đăng ký</NavDropdown.Item>
                             <NavDropdown.Item  >Thông tin</NavDropdown.Item>
-                        </NavDropdown>
+                        </NavDropdown> */}
                     </Nav>
                 </Navbar.Collapse>
             </Container>
